@@ -25,16 +25,28 @@ body {
     padding: 40px 0px 47px 0px;
 }
 
-.cards {
+.cards{
+    width: 100%;
+}
+
+ul{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
     width: 117px;
     height: 146px;
     border-radius: 5px;
     background-color: #A7E9AF;
     border: 1px solid #99CEA8;
     padding: 24px 7px 22px 10px;
+    margin: 2%;
 }
 
-.cards img{
+.card img{
     width: 100px;
     height: 100px;
 }
