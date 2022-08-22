@@ -1,27 +1,42 @@
-const cards = [];
+let qntCartas;
 
-function addCards() {
+iniciaJogo();
 
-    const cardList = document.querySelector('ul');
+function iniciaJogo() {
 
-    cardList.innerHTML = '';
+    while (true) {
+        qntCartas = prompt("Indique a quantidade de cartas para jogar, nº pares de 4 a 14.");
 
-    let counter = 0;
-
-    for (let counter = 0; cards.length > counter; cont++) {
-
-        let item = `
-            <li>
-                <div>
-                    <img class="front" src="./Arquivos/front.png" alt="Parrot Image">
-                </div>
-                <div>
-                    <img class="back" src="./Arquivos/3parrots.gif" alt="Animated Gif">
-                </div>
-            </li>
-        `;
-
-        cardList.innerHTML = cardList.innerHTML + item;
+        if (qntCartas < 4 || qntCartas > 14 || qntCartas % 2 == 1) {
+        }
+        else {
+            break;
+        }
+    
     }
 
+addCards();
+
+    function addCards() {
+
+        const cardList = document.querySelector('ul');
+
+        cardList.innerHTML = '';
+
+        for (let counter = 0; qntCartas > counter; counter++) {
+
+            let item = `
+            <li class="card">
+                    <img class="front" src="./Arquivos/front.png" alt="Parrot Image">
+                                      
+                    <img class="back" src="./Arquivos/3parrots.gif" alt="Animated Gif">
+                                        
+                </li>
+        `;
+
+            cardList.innerHTML = cardList.innerHTML + item;
+        }
+
+        
+    }
 }
